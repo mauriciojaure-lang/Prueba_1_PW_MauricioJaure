@@ -1,0 +1,246 @@
+{
+  "info": {
+    "name": "Rifa UPLA - Prueba 1 PHP y Servicios Web",
+    "description": "Colección para XAMPP. baseUrl usa por defecto http://localhost/rifa-upla. Importar y ejecutar en orden. Si usas el servidor integrado de PHP con router.php, cambia baseUrl a http://localhost:8080.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Login API",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "usuario",
+              "value": "admin",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "admin123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/api/login.php",
+        "description": "Debe responder HTTP 200 y crear la sesión administrativa RIFA_API. Postman conserva la cookie para las siguientes solicitudes al mismo host. Use admin / admin123."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Login correcto', function () { pm.response.to.have.status(200); });",
+              "pm.test('La respuesta confirma la sesión', function () { pm.expect(pm.response.json().ok).to.eql(true); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Listar participantes (protegido)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/participantes.php"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Consulta de participantes correcta', function () { pm.response.to.have.status(200); });",
+              "pm.test('La respuesta contiene la lista', function () { pm.expect(pm.response.json()).to.have.property('participantes'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Listar premios (protegido)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/premios.php"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Consulta de premios correcta', function () { pm.response.to.have.status(200); });",
+              "pm.test('La respuesta contiene la lista', function () { pm.expect(pm.response.json()).to.have.property('premios'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Registrar participante",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "nombre",
+              "value": "Participante Demo",
+              "type": "text"
+            },
+            {
+              "key": "apellido",
+              "value": "Postman",
+              "type": "text"
+            },
+            {
+              "key": "numero_rifa",
+              "value": "60",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/api/registrar.php",
+        "description": "En el proyecto recién descomprimido, el número 60 está libre. Cambie el valor si ya lo ha utilizado."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Participante registrado', function () { pm.response.to.have.status(201); });",
+              "if (pm.response.code === 201) { pm.collectionVariables.set('participanteId', String(pm.response.json().participante.id)); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Actualizar participante",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "{{participanteId}}",
+              "type": "text"
+            },
+            {
+              "key": "nombre",
+              "value": "Participante Actualizado",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/api/actualizar.php"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Participante actualizado', function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Eliminar participante",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/eliminar.php?id={{participanteId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Participante eliminado', function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Cerrar sesión API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/logout.php"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Sesión cerrada', function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "8. Verificar que la API está protegida",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/participantes.php",
+        "description": "Ejecutar después de 7. Cerrar sesión API. Debe llamar exactamente a la misma ruta de 2. Listar participantes, pero ya sin cookie de sesión, y responder HTTP 401. Si responde 404, revisa baseUrl: en XAMPP debe ser http://localhost/rifa-upla (sin /web y sin /api al final)."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('La ruta existe (no debe responder 404)', function () { pm.expect(pm.response.code, 'Revisa baseUrl: en XAMPP debe ser http://localhost/rifa-upla').to.not.eql(404); });",
+              "pm.test('El servicio rechaza solicitudes sin sesión (401)', function () { pm.response.to.have.status(401); });"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost/rifa-upla",
+      "type": "string"
+    },
+    {
+      "key": "participanteId",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

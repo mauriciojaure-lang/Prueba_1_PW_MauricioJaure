@@ -1,0 +1,147 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #f3f5f9; color: #1d2433; }
+nav { background: #0b3d7a; padding: 12px 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+nav a, nav strong { color: #fff; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+nav .salir { margin-left: auto; background: #c0392b; padding: 4px 12px; border-radius: 6px; }
+main { max-width: 760px; margin: 28px auto; background: #fff; padding: 28px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+h1 { margin-top: 0; color: #0b3d7a; }
+label { display: block; margin: 14px 0 4px; font-weight: 600; }
+input[type=text], input[type=password], input[type=number], input[type=file], select { width: 100%; padding: 9px; border: 1px solid #b8c0cc; border-radius: 6px; font-size: 1rem; background: #fff; color: #1d2433; }
+button, .btn { background: #0b3d7a; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; font-size: 1rem; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 16px; }
+button:hover, .btn:hover { background: #082d5a; }
+button.peligro { background: #c0392b; margin: 0; padding: 4px 10px; font-size: .85rem; }
+.msg { padding: 12px 14px; border-radius: 6px; margin: 14px 0; font-weight: 600; }
+.msg.ok { background: #e3f6e8; color: #1b6b35; }
+.msg.error { background: #fde8e6; color: #9b2c20; }
+.captcha { font-size: 1.4rem; font-weight: 700; background: #eef2f8; padding: 10px; border-radius: 6px; text-align: center; letter-spacing: 2px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.card { background: #eef2f8; padding: 18px; border-radius: 10px; text-decoration: none; color: inherit; }
+.card:hover { background: #dde6f3; }
+.card h3 { margin: 0 0 6px; color: #0b3d7a; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.chip { background: #eef2f8; padding: 6px 10px; border-radius: 20px; display: flex; gap: 8px; align-items: center; }
+.chip form { margin: 0; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #dde3ec; }
+.resumen { background: #eef2f8; padding: 14px; border-radius: 8px; margin: 16px 0; }
+.resumen .total { font-size: 1.4rem; font-weight: 700; color: #0b3d7a; }
+.fila { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.fila-inline { display: flex; gap: 10px; align-items: end; }
+.fila-inline > div { flex: 1; }
+
+
+.leyenda-numeros { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0 10px; font-size: .92rem; }
+.leyenda-numeros span { display: inline-flex; align-items: center; gap: 6px; }
+.estado { width: 13px; height: 13px; display: inline-block; border-radius: 3px; }
+.estado.libre { background: #e3f6e8; border: 1px solid #26834a; }
+.estado.ocupado { background: #fde8e6; border: 1px solid #c0392b; }
+.estado.mio { background: #dce9fb; border: 1px solid #0b3d7a; }
+.cuadricula-numeros { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; margin: 12px 0 24px; }
+.form-numero { margin: 0; min-width: 0; }
+button.numero-rifa { display: block; width: 100%; text-align: center; padding: 9px 2px; margin: 0; border-radius: 6px; font-weight: 700; border: 1px solid transparent; font-size: .95rem; }
+button.numero-rifa.libre { background: #e3f6e8; color: #1b6b35; border-color: #b8e4c4; }
+button.numero-rifa.libre:hover { background: #c9efd3; }
+button.numero-rifa.ocupado { background: #fde8e6; color: #9b2c20; border-color: #f3c1bc; cursor: not-allowed; opacity: 1; }
+button.numero-rifa.mio { background: #dce9fb; color: #0b3d7a; border-color: #8eb5ed; }
+button.numero-rifa.mio:hover { background: #c3daf8; }
+.texto-actualizacion { color: #5a6475; font-size: .85rem; margin: 8px 0; }
+.formulario-numero-manual { margin-bottom: 12px; }
+@media (max-width: 520px) {
+  main { margin: 12px; padding: 16px; }
+  .fila { grid-template-columns: 1fr; }
+  .cuadricula-numeros { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+
+.acciones-rifa { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0; }
+.acciones-rifa form { margin: 0; }
+.form-pagar button.boton-pagar { background: #187744; font-weight: 700; padding: 11px 24px; margin-top: 0; }
+.form-pagar button.boton-pagar:hover { background: #105c32; }
+.form-vaciar button.peligro { margin-top: 0; }
+.nota-pago { color: #5a6475; font-size: .92rem; margin-top: 6px; }
+
+/* Registro, roles y panel administrativo */
+.texto-secundario { color: #5a6475; font-size: .93rem; }
+.texto-secundario a { color: #0b3d7a; font-weight: 650; }
+main.admin-main { max-width: 1250px; }
+.tabla-scroll { width: 100%; overflow-x: auto; }
+.tabla-scroll table { min-width: 600px; }
+.stats-admin { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 20px 0; }
+.stat-admin { display: flex; flex-direction: column; gap: 5px; padding: 16px; border-radius: 10px; background: #eef2f8; border: 1px solid #dde3ec; }
+.stat-admin strong { color: #0b3d7a; font-size: 1.8rem; }
+.stat-admin span { color: #4f596b; font-size: .92rem; }
+.seccion-admin { margin: 28px 0; padding-top: 10px; border-top: 1px solid #dde3ec; }
+.seccion-admin h2 { color: #0b3d7a; margin-bottom: 6px; }
+.estado-premio { display: inline-block; background: #eef2f8; color: #354052; padding: 4px 9px; border-radius: 999px; font-size: .88rem; }
+.estado-premio.disponible { background: #e3f6e8; color: #1b6b35; }
+.estado-premio.entregado { background: #eef2f8; color: #5a6475; }
+.mapa-numeros-admin { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; margin: 18px 0 6px; }
+.numero-admin { display: inline-flex; align-items: center; justify-content: center; padding: 7px 2px; border-radius: 5px; font-weight: 700; font-size: .86rem; }
+.numero-admin.libre { background: #e3f6e8; color: #1b6b35; }
+.numero-admin.ocupado { background: #fde8e6; color: #9b2c20; }
+@media (max-width: 600px) {
+  main.admin-main { margin: 10px; padding: 14px; }
+  .mapa-numeros-admin { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+
+/* Rol visible pero no editable durante el registro; etiquetas en el panel admin. */
+input.rol-solo-lectura { background: #eef2f8; color: #354052; border-style: dashed; cursor: not-allowed; font-weight: 700; }
+.rol-etiqueta { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: .88rem; font-weight: 700; white-space: nowrap; }
+.rol-etiqueta.rol-admin { background: #dce9fb; color: #0b3d7a; }
+.rol-etiqueta.rol-usuario { background: #e3f6e8; color: #1b6b35; }
+
+/* Formularios de categoría disponibles solo en el panel protegido de administración. */
+.form-categoria { min-width: 155px; margin: 0; display: grid; grid-template-columns: minmax(120px, 1fr) auto; gap: 6px; align-items: center; }
+.form-categoria select { min-width: 120px; }
+.form-categoria-api { min-width: 220px; grid-template-columns: 1fr; }
+.form-categoria input[type=text] { min-width: 150px; }
+.btn-categoria { margin: 0; padding: 7px 10px; font-size: .88rem; white-space: nowrap; }
+.label-compacta { margin: 4px 0 2px; font-size: .88rem; }
+
+
+/* Revisión administrativa de comprobantes y categorías automáticas */
+.acciones-revision { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.acciones-revision form { margin: 0; }
+.acciones-revision button { margin: 0; padding: 7px 11px; font-size: .88rem; }
+.acciones-revision .btn-aceptar { background: #187744; }
+.acciones-revision .btn-aceptar:hover { background: #105c32; }
+.acciones-revision .btn-rechazar { background: #c0392b; }
+.acciones-revision .btn-rechazar:hover { background: #962d22; }
+.categoria-etiqueta { display: inline-block; border-radius: 999px; padding: 4px 10px; font-size: .86rem; font-weight: 750; white-space: nowrap; }
+.categoria-user { background: #eef2f8; color: #354052; }
+.categoria-cliente { background: #fff1d8; color: #805300; }
+.categoria-comprador { background: #e3f6e8; color: #1b6b35; }
+
+.form-ciudad-api { min-width: 170px; display: grid; grid-template-columns: minmax(110px, 1fr) auto; gap: 6px; align-items: center; }
+.form-ciudad-api input { min-width: 110px; }
+.form-ciudad-api button { margin: 0; padding: 7px 9px; font-size: .82rem; white-space: nowrap; }
+
+
+.estado.reservado { background: #fff3d8; border: 1px solid #c78c22; }
+.estado.pendiente { background: #fff0c2; border: 1px solid #b77a10; }
+button.numero-rifa.reservado { background: #fff3d8; color: #805719; border-color: #c78c22; cursor: not-allowed; opacity: 1; }
+button.numero-rifa.pendiente { background: #fff0c2; color: #78510c; border-color: #b77a10; cursor: not-allowed; opacity: 1; }
+
+.numero-admin.pendiente { background: #fff0c2; color: #78510c; border-color: #b77a10; }
+
+/* Ajustes del panel administrativo: categorías y revisión de comprobantes */
+.categoria-con-guardar { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 150px; }
+.categoria-con-guardar form, .form-categoria-api { margin: 0; }
+.btn-guardar-categoria { padding: 6px 9px; margin: 0; font-size: .78rem; white-space: nowrap; }
+.form-categoria-api { display: flex; align-items: center; gap: 6px; min-width: 155px; }
+.form-categoria-api select { min-width: 95px; flex: 1; margin: 0; padding: 7px 8px; }
+.form-categoria-api button { margin: 0; padding: 7px 10px; font-size: .82rem; }
+.comprobantes-admin-lista { display: flex; flex-direction: column; gap: 14px; }
+.comprobante-admin-card { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 18px; align-items: stretch; padding: 14px; border: 1px solid #d9e1ec; border-radius: 10px; background: #fff; }
+.comprobante-admin-info h3 { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin: 0 0 10px; color: #123f75; }
+.comprobante-admin-info p { margin: 5px 0; }
+.estado-pendiente { display: inline-block; border-radius: 20px; padding: 3px 9px; background: #fff0c2; color: #78510c; font-size: .75rem; font-weight: 700; }
+.comprobante-admin-preview { width: 230px; min-height: 155px; max-height: 210px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #d5dce6; border-radius: 7px; background: #f4f6f9; color: #526174; font-size: .82rem; text-align: center; }
+.comprobante-admin-preview img { display: block; width: 100%; height: 100%; max-height: 210px; object-fit: contain; }
+.comprobante-admin-preview iframe { display: block; width: 100%; height: 210px; border: 0; background: #fff; }
+@media (max-width: 700px) {
+  .comprobante-admin-card { grid-template-columns: 1fr; }
+  .comprobante-admin-preview { width: 100%; max-width: 300px; justify-self: end; }
+}

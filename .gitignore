@@ -1,0 +1,11 @@
+# No versionar comprobantes personales subidos durante pruebas.
+/private/comprobantes/*
+!/private/comprobantes/.gitkeep
+!/private/comprobantes/.htaccess
+
+# Cuentas y metadatos creados durante el uso de la aplicación.
+/web/data/usuarios.json
+/web/data/comprobantes.json
+
+# Archivo de bloqueo creado automáticamente durante la ejecución.
+/api/data/estado_rifa.lock

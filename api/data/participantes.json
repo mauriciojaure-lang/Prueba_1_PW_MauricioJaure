@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mauricio",
+        "apellido": "Jaure",
+        "numero_rifa": 6,
+        "ciudad": "quintero",
+        "categoria": "comprador",
+        "usuario_id": 3,
+        "usuario": "kazzo",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "comprador",
+        "creado_en": "2026-10-30T04:44:29+01:00",
+        "numeros_rifa": [
+            6,
+            7,
+            56
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "jean",
+        "apellido": "jaure",
+        "numero_rifa": 1,
+        "ciudad": "ventana",
+        "categoria": "comprador",
+        "usuario_id": 4,
+        "usuario": "jean",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "comprador",
+        "creado_en": "2026-10-30T04:48:35+01:00",
+        "numeros_rifa": [
+            1,
+            2,
+            3,
+            4,
+            100
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Mauricio",
+        "apellido": "Jaure",
+        "numero_rifa": 13,
+        "ciudad": "ventana",
+        "categoria": "comprador",
+        "usuario_id": 5,
+        "usuario": "mauricio",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "comprador",
+        "creado_en": "2026-10-30T13:31:04+01:00",
+        "numeros_rifa": [
+            13,
+            44
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "juan",
+        "apellido": "zapata",
+        "numero_rifa": null,
+        "ciudad": "santiago",
+        "categoria": "user",
+        "usuario_id": 6,
+        "usuario": "juan",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "user",
+        "creado_en": "2026-10-30T22:56:37+01:00"
+    },
+    {
+        "id": 5,
+        "nombre": "mauricio",
+        "apellido": "jaure",
+        "numero_rifa": 22,
+        "ciudad": "rancagua",
+        "categoria": "comprador",
+        "usuario_id": 7,
+        "usuario": "mauri",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "comprador",
+        "creado_en": "2026-10-31T00:00:11+01:00",
+        "numeros_rifa": [
+            22,
+            23,
+            33
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "juan",
+        "apellido": "cortez",
+        "numero_rifa": 5,
+        "ciudad": "viña del mar",
+        "categoria": "comprador",
+        "usuario_id": 8,
+        "usuario": "juansito",
+        "rol": "usuario",
+        "origen": "registro_web",
+        "estado": "comprador",
+        "creado_en": "2026-10-31T00:30:29+01:00",
+        "numeros_rifa": [
+            5,
+            16,
+            17
+        ]
+    }
+]

@@ -1,0 +1,211 @@
+[
+    {
+        "numero": 56,
+        "propietario": "6516a9633d12fcee382638bc261256bd",
+        "usuario": "kazzo",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:44:52+01:00",
+        "comprobante": "20261030_044506_kazzo_088e05_91a17ac8-ec35-4462-9865-b2234d6a55d0.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T04:45:06+01:00",
+        "confirmado_en": "2026-10-30T04:46:52+01:00"
+    },
+    {
+        "numero": 6,
+        "propietario": "6516a9633d12fcee382638bc261256bd",
+        "usuario": "kazzo",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:44:54+01:00",
+        "comprobante": "20261030_044506_kazzo_088e05_91a17ac8-ec35-4462-9865-b2234d6a55d0.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T04:45:06+01:00",
+        "confirmado_en": "2026-10-30T04:46:52+01:00"
+    },
+    {
+        "numero": 7,
+        "propietario": "6516a9633d12fcee382638bc261256bd",
+        "usuario": "kazzo",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:44:55+01:00",
+        "comprobante": "20261030_044506_kazzo_088e05_91a17ac8-ec35-4462-9865-b2234d6a55d0.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T04:45:06+01:00",
+        "confirmado_en": "2026-10-30T04:46:52+01:00"
+    },
+    {
+        "numero": 1,
+        "propietario": "3ffa4af4df1b1dc00c497f49338a5e2b",
+        "usuario": "jean",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:48:49+01:00",
+        "comprobante": "20261030_044905_jean_9e281d_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 10000,
+        "comprobante_fecha": "2026-10-30T04:49:05+01:00",
+        "confirmado_en": "2026-10-30T04:51:08+01:00"
+    },
+    {
+        "numero": 2,
+        "propietario": "3ffa4af4df1b1dc00c497f49338a5e2b",
+        "usuario": "jean",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:48:50+01:00",
+        "comprobante": "20261030_044905_jean_9e281d_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 10000,
+        "comprobante_fecha": "2026-10-30T04:49:05+01:00",
+        "confirmado_en": "2026-10-30T04:51:08+01:00"
+    },
+    {
+        "numero": 3,
+        "propietario": "3ffa4af4df1b1dc00c497f49338a5e2b",
+        "usuario": "jean",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:48:50+01:00",
+        "comprobante": "20261030_044905_jean_9e281d_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 10000,
+        "comprobante_fecha": "2026-10-30T04:49:05+01:00",
+        "confirmado_en": "2026-10-30T04:51:08+01:00"
+    },
+    {
+        "numero": 4,
+        "propietario": "3ffa4af4df1b1dc00c497f49338a5e2b",
+        "usuario": "jean",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:48:51+01:00",
+        "comprobante": "20261030_044905_jean_9e281d_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 10000,
+        "comprobante_fecha": "2026-10-30T04:49:05+01:00",
+        "confirmado_en": "2026-10-30T04:51:08+01:00"
+    },
+    {
+        "numero": 100,
+        "propietario": "3ffa4af4df1b1dc00c497f49338a5e2b",
+        "usuario": "jean",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T04:48:54+01:00",
+        "comprobante": "20261030_044905_jean_9e281d_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 10000,
+        "comprobante_fecha": "2026-10-30T04:49:05+01:00",
+        "confirmado_en": "2026-10-30T04:51:08+01:00"
+    },
+    {
+        "numero": 44,
+        "propietario": "2e1e42dec47a6ac5a684f4638612ef2c",
+        "usuario": "mauricio",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T13:31:19+01:00",
+        "comprobante": "20261030_133128_mauricio_580ce9_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 4000,
+        "comprobante_fecha": "2026-10-30T13:31:28+01:00",
+        "confirmado_en": "2026-10-30T13:32:03+01:00"
+    },
+    {
+        "numero": 13,
+        "propietario": "2e1e42dec47a6ac5a684f4638612ef2c",
+        "usuario": "mauricio",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-30T13:31:20+01:00",
+        "comprobante": "20261030_133128_mauricio_580ce9_Captura_de_pantalla_2025-04-11_230759.png",
+        "monto": 4000,
+        "comprobante_fecha": "2026-10-30T13:31:28+01:00",
+        "confirmado_en": "2026-10-30T13:32:03+01:00"
+    },
+    {
+        "numero": 25,
+        "propietario": "d77b5b65ea00e984110113140fe2e278",
+        "usuario": "juan",
+        "estado": "rechazado",
+        "reservado_en": "2026-10-30T22:57:32+01:00",
+        "comprobante": "20261030_225745_juan_e60554_Captura_de_pantalla_2025-04-14_232142.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T22:57:45+01:00",
+        "rechazado_en": "2026-10-31T00:02:23+01:00"
+    },
+    {
+        "numero": 26,
+        "propietario": "d77b5b65ea00e984110113140fe2e278",
+        "usuario": "juan",
+        "estado": "rechazado",
+        "reservado_en": "2026-10-30T22:57:33+01:00",
+        "comprobante": "20261030_225745_juan_e60554_Captura_de_pantalla_2025-04-14_232142.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T22:57:45+01:00",
+        "rechazado_en": "2026-10-31T00:02:23+01:00"
+    },
+    {
+        "numero": 27,
+        "propietario": "d77b5b65ea00e984110113140fe2e278",
+        "usuario": "juan",
+        "estado": "rechazado",
+        "reservado_en": "2026-10-30T22:57:33+01:00",
+        "comprobante": "20261030_225745_juan_e60554_Captura_de_pantalla_2025-04-14_232142.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-30T22:57:45+01:00",
+        "rechazado_en": "2026-10-31T00:02:23+01:00"
+    },
+    {
+        "numero": 33,
+        "propietario": "bbf096c6c9553c10177b849c6e373ae5",
+        "usuario": "mauri",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:00:49+01:00",
+        "comprobante": "20261031_000101_mauri_e02b95_Captura_de_pantalla_2025-04-23_230757.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:01:01+01:00",
+        "confirmado_en": "2026-10-31T00:02:35+01:00"
+    },
+    {
+        "numero": 23,
+        "propietario": "bbf096c6c9553c10177b849c6e373ae5",
+        "usuario": "mauri",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:00:50+01:00",
+        "comprobante": "20261031_000101_mauri_e02b95_Captura_de_pantalla_2025-04-23_230757.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:01:01+01:00",
+        "confirmado_en": "2026-10-31T00:02:35+01:00"
+    },
+    {
+        "numero": 22,
+        "propietario": "bbf096c6c9553c10177b849c6e373ae5",
+        "usuario": "mauri",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:00:50+01:00",
+        "comprobante": "20261031_000101_mauri_e02b95_Captura_de_pantalla_2025-04-23_230757.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:01:01+01:00",
+        "confirmado_en": "2026-10-31T00:02:35+01:00"
+    },
+    {
+        "numero": 5,
+        "propietario": "fbb013057a2ac165f7961372c462fce7",
+        "usuario": "juansito",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:32:14+01:00",
+        "comprobante": "20261031_003229_juansito_89713a_Captura_de_pantalla_2025-04-11_225709.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:32:29+01:00",
+        "confirmado_en": "2026-10-31T00:34:38+01:00"
+    },
+    {
+        "numero": 16,
+        "propietario": "fbb013057a2ac165f7961372c462fce7",
+        "usuario": "juansito",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:32:14+01:00",
+        "comprobante": "20261031_003229_juansito_89713a_Captura_de_pantalla_2025-04-11_225709.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:32:29+01:00",
+        "confirmado_en": "2026-10-31T00:34:38+01:00"
+    },
+    {
+        "numero": 17,
+        "propietario": "fbb013057a2ac165f7961372c462fce7",
+        "usuario": "juansito",
+        "estado": "confirmado",
+        "reservado_en": "2026-10-31T00:32:14+01:00",
+        "comprobante": "20261031_003229_juansito_89713a_Captura_de_pantalla_2025-04-11_225709.png",
+        "monto": 6000,
+        "comprobante_fecha": "2026-10-31T00:32:29+01:00",
+        "confirmado_en": "2026-10-31T00:34:38+01:00"
+    }
+]
